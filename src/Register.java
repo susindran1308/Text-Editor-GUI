@@ -43,6 +43,9 @@ public class Register extends JPanel implements ActionListener {
         {
             Login login = (Login)getParent();
             login.cl.show(login, "login");
+            login.revalidate();
+            login.repaint();
+
         }
         else if(e.getSource() == register && passTF.getPassword().length != 0 && passC.getPassword().length != 0)
         {
@@ -82,6 +85,8 @@ public class Register extends JPanel implements ActionListener {
 
                     Login login = (Login)getParent();
                     login.cl.show(login, "login");
+                    login.revalidate();
+                    login.repaint();
 
                 } catch (FileNotFoundException ex) {
                     System.out.println(new File("").getAbsolutePath());
